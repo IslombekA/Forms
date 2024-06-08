@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div>
+    <h1>Fill out this form</h1>
+</div>
+<div>
+    <form method="post">
+        <button>Enter your first name:</button>
+        <input type="text" name="first_name" placeholder="first_name"> 
+        <button>Enter your last name:</button>  
+        <input type="text" name="last_name" placeholder="last_name">
+    </form>
+</div>
+{% endblock%}
