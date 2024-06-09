@@ -1,7 +1,12 @@
 h1  {
     font-family: sans-serif;
     font-size: xx-large;
-    color: aqua;
+    color: darkblue;
     text-align: center; 
+}
+
+input {
+    width: 400px;
+    height: 30px;
 }
 

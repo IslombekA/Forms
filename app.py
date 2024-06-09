@@ -4,14 +4,15 @@ app = Flask(__name__)
 
 db = SQL("sqlite:///text.db")
 
-
-
 @app.route('/', methods=["GET", "POST"])
 def index(): 
     if request.method == "POST":
         last_name = request.form.get("last_name")
-        first_name = request.form.get("first_name")    
-        db.execute("INSERT INTO persons(first_name, last_name)VALUES(?,?)", first_name, last_name)       
+        first_name = request.form.get("first_name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        phone_number = request.form.get("phone_number")    
+        db.execute("INSERT INTO persons(first_name, last_name, email, password, phone_number)VALUES(?,?,?,?,?)", first_name, last_name, email, password, phone_number)       
 
         return redirect('/registrants')
 
